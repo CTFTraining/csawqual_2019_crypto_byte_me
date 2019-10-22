@@ -6,3 +6,5 @@ services:
     image: ctftraining/csawquals_2019_crypto_byte_me
     ports:
       - "8060:8000"
+    environment:
+      - FLAG=flag{test}
