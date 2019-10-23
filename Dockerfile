@@ -8,4 +8,4 @@ COPY files/ ./
 
 EXPOSE 8000
 
-CMD echo $FLAG > /app/flag.txt; export FLAG=not_flag; $FLAG=not_flag;socat -d -d -d -d -v TCP-LISTEN:8000,fork,reuseaddr EXEC:python2 generator.py,pty,stderr
+CMD echo $FLAG > flag.txt; export FLAG=not_flag; $FLAG=not_flag;socat -d -d -d -d -v TCP-LISTEN:8000,fork,reuseaddr EXEC:python2 generator.py,pty,stderr
